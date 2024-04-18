@@ -17,12 +17,14 @@
         });
     });
     const scrollToSectionBtn = document.getElementById('scrollToSectionBtn');
-    const targetSection = document.getElementById('targetSection');
-    
-    scrollToSectionBtn.addEventListener('click', function() {
-      const targetY = targetSection.offsetTop;
-      window.scrollTo({
-        top: targetY,
-        behavior: 'smooth'
-      });
-    });
+const targetSection = document.getElementById('targetSection');
+
+scrollToSectionBtn.addEventListener('click', function() {
+  const targetY = targetSection.offsetTop;
+  window.scrollTo({
+    top: targetY,
+    behavior: 'smooth'
+  });
+});
+
+
