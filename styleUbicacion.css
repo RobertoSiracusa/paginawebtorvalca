@@ -1,0 +1,287 @@
+/* body{ */
+   /* background-color: white; /*aplico color de fondo al body de la pagina, al aplicarlo aqui se lo estoy aplicando a toda la pagina*/
+
+/*}*/
+/*header{
+    color: red;
+    font-size: 1.7rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    text-align:center ;
+}*/
+@font-face {
+    font-family: Oswald;
+    src: url('/assets/fonts/Oswald/Oswald-VariableFont_wght.ttf');
+}
+* {
+    
+    list-style: none; /* cambia estilo de las listas, tener seleccionado el none le quita el punto a la lista */
+    box-sizing: border-box; /* controla el espaciado,evita el agrandamiento de caja*/
+    /* PROPIEDADES DEL ESPACIADO */
+    padding: 0;
+    border: 0;
+    margin: 0;
+    /* PROPIEDADES DE LA TIPOGRAFIA */
+    font-family: Oswald; /*cambia el tipo de tipografia*/
+    /* font-size: 18pt; tamaño recomendado entre 12pt y 16pt, 1 rem equivale a 16 pixeles */
+    font-weight: 400; /*grosor de la letra */
+    outline: none;/*eliminar borde a los inputs que generemos*/
+    color: #555555;
+    /*background-color: #02DD4B;*/
+    text-decoration: none;
+}
+/* propiedades de el fondo */
+ #background{
+    background-color: #D3D3D3; 
+    background-size:100%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-repeat:repeat-y; /*sirve para que se repita a lo largo del eje Y*/  
+} 
+h1,h3,h4 {
+    font-size: 36pt; /*tamaño de los titulos*/
+}
+button{
+    border:solid 4px #0A2304;
+    background-color: #fafa77;
+    padding: 0.7rem;/*sirve para separar los bordes del texto del boton*/
+    font-weight: 500; /* los botones tiene que ir en negrita*/
+    border-radius: 0.75rem;
+    transition: all .3s ease-out;
+    color: #0A2304;
+    font-size: 22px;
+    letter-spacing: 0.2cm;
+}
+button:hover{ /* actua compo subclase, el HOVER significa al pasar el mouse sobre el objeto, en este caso el boton. Se aplica gracias al comando transition*/
+    background-color: #FFDB58;/* hace que al activar el transition el fondo pase a ser transparente*/;
+    color: #0A2304;
+    border-color: #0A2304;
+}
+/* TODO LO QUE NO SEA GENERAL LO APLICAREMOS CON LAS CLASES EJEMPLO: JUMBOTRON*/
+/* TOMO LA CLASE JUMBOTRON, PREVIAMENTE DEFINIDA EN EL HTML*/
+.jumbotron{
+    text-align: center; /* ALINEAR LOS ELEMENTOS DE LA CLASE JUMBOTRON DEL HTML*/
+}
+.jumbotron h1{
+    background-color: #555555; 
+    border-radius: 25px;
+    color: #fafafa; 
+    text-align: center;
+    line-height: 69px; 
+    display: inline-block;
+    padding: 5px 25px;
+    opacity: 65%;
+}
+.jumbotron h1:hover{
+    opacity: 100%;
+    transition: 0.7s;
+}
+.jumbotron p{
+    /* margin-bottom: 16pt; */
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.jumbotron button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/*EXPLICACION*/
+/* .box1{
+    opacity:1;
+    transform: all .9s ease-in;
+}
+.box1:hover{
+    opacity:0.5;
+} */
+
+/* img{
+    opacity: 1;
+    transition: all 0.5s;
+}OPACIDAD IMAGENES CAMBIAR LUEGO AAAAAAAAAAAAAAAAAAAAAAAA
+img:hover{
+    opacity:0.5;
+} */
+input{
+    border: transparent;
+    background-color: #D9D9D9;
+    padding: 0.7rem;/*sirve para separar los bordes del texto del boton*/
+    border-radius: 2.5rem;
+}
+.header{ 
+    position: sticky; 
+    top:0;
+    left: 0;
+    /* width: 100%; */
+    z-index: 1000; /* aplica profundidad para que el elemento este por delante del resto*/
+}
+h2{
+    font-size:22px;
+}
+.parrafoformulario{
+    font-size:16px;
+}
+.header .nav{
+    background-color:#FECB2E;
+    display: flex;
+}
+.elementosinicio{
+    display: flex;
+    gap: 8rem;
+    width: max-content;
+    align-items: center;    
+}
+.elementosinicio img{
+    margin-left: 60px;
+}
+.elementosinicio li{
+    color: #0A2304;
+    font-size: 26px;
+}
+.header .nav .elementosinicio li{
+    width: max-content;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 23px 0px;
+    height: 100%;
+}
+
+.grid-item {
+    max-width: 580px; /* Ancho máximo de las imágenes superiores izquierda e inferior izquierda */
+}
+
+.grid-item img {
+    border-radius: 12px; /* Ajusta según sea necesario */
+}
+
+/* Ajusta las dimensiones de las imágenes superiores e inferiores derecha */
+.grid-item:nth-child(2),
+.grid-item:nth-child(4) {
+    max-width: 469px;
+    margin-left: 23px;
+}
+.grid-item:nth-child(1),
+.grid-item:nth-child(3) {
+    margin-left: 172px;
+}
+.imagenesmain1{
+    margin-top: 15px;
+}
+.sobrenosotros {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+}
+
+img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    margin-left: 23px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+ul {
+    list-style: none;
+    max-width: 300px;
+}
+
+h3 {
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y el párrafo */
+}
+
+p {
+    line-height: 1.5; /* Ajusta el espaciado entre líneas del párrafo */
+}
+img{
+    opacity: 65%;
+}
+img:hover{
+    opacity: 100%;
+    transition: 0.7s;
+}
+.imagenlocal{
+    opacity:100%;
+}
+/* .footer {
+    background-color: #f0f0f0; /* Color de fondo opcional para el footer */
+     /* Ajusta según sea necesario 
+}
+
+.footer ul {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 60px;
+    font-size: 30px;
+}
+
+.footer-item {
+    margin-right: 20px; /*Ajusta el espacio entre elementos según sea necesario
+    white-space: nowrap;
+} */
+.Contacto {
+    text-align: center; /* Centra el contenido del contenedor */
+}
+
+.contact-list {
+    background-color:#FECB2E;
+    padding: 20px; /* Ajusta el espacio interno según sea necesario */
+    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+    margin: auto; /* Centra el elemento horizontalmente */
+    list-style: none;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.contact-list li {
+    margin-bottom: 10px; /* Ajusta el espacio entre elementos según sea necesario */
+}
+h3 {
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.footer {
+    background-color: #fafa77;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-left: 600px;
+    font-size: 22px;
+}
+
+.footer-item {
+    margin: 0 90px; /* Ajusta el espacio entre elementos según sea necesario */
+    white-space: nowrap;
+}
+.scroll {
+    cursor: pointer; 
+}
+.imagennavbar{
+    width: 203px;
+    height: 136px;
+}
+a{
+    color: #0A2304;
+    font-size: 26px;
+}
+.parrafoUbicacion{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
