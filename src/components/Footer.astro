@@ -1,0 +1,43 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-slate-900 border-t border-slate-800 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="col-span-1 md:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+            <span class="text-2xl font-bold text-white tracking-tight">TORVALCA</span>
+        </div>
+        <p class="text-sm text-gray-400">
+          Especialistas en tornillería y ferretería industrial. Calidad que construye confianza.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="col-span-1 md:col-span-2 md:pl-16">
+        <h3 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Navegación</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-torvalca-yellow transition-colors">Inicio</a></li>
+          <li><a href="#nosotros" class="hover:text-torvalca-yellow transition-colors">Nosotros</a></li>
+          <li><a href="#productos" class="hover:text-torvalca-yellow transition-colors">Productos</a></li>
+          <li><a href="#contacto" class="hover:text-torvalca-yellow transition-colors">Ubícanos</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-span-1">
+        <h3 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Legal</h3>
+        <ul class="space-y-2">
+          <li><span class="text-sm">RIF: J-302913691</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800 mt-12 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <p>&copy; {currentYear} Torvalca, C.A. Todos los derechos reservados.</p>
+      <p class="mt-2 md:mt-0">Diseñado con <span class="text-torvalca-yellow">❤</span> para la industria.</p>
+    </div>
+  </div>
+</footer>

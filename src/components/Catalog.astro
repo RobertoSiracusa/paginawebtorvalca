@@ -1,0 +1,76 @@
+---
+const products = [
+  {
+    title: "Tornillos Allen y Hexagonales",
+    description: "Alta resistencia para maquinaria y estructuras pesadas. Grados 8.8, 10.9 y 12.9.",
+    image: "/assets/images/borde-allen-torval.png",
+    category: "Industrial"
+  },
+  {
+    title: "Barras Roscadas",
+    description: "Sistemas de fijación versátiles para construcción y montaje. Diferentes longitudes y diámetros.",
+    image: "/assets/images/borde-barras-torval.png",
+    category: "Construcción"
+  },
+  {
+    title: "Tornillería Automotriz (TCA)",
+    description: "Componentes especializados para el sector automotriz y maquinaria pesada.",
+    image: "/assets/images/borde-tca-torval.png",
+    category: "Automotriz"
+  },
+  {
+    title: "Bronce y Aleaciones",
+    description: "Resistencia a la corrosión y conductividad. Ideales para aplicaciones eléctricas y marítimas.",
+    image: "/assets/images/borde-bronce-torval.png",
+    category: "Especiales"
+  }
+];
+---
+
+<section id="productos" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 uppercase tracking-tight">
+        Nuestro <span class="text-torvalca-accent">Catálogo</span>
+      </h2>
+      <div class="w-24 h-1 bg-torvalca-yellow mx-auto mt-4"></div>
+      <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+        Variedad, calidad y stock permanente para satisfacer las necesidades de su industria.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {products.map((product) => (
+        <div class="group relative bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="aspect-square overflow-hidden bg-gray-100 relative">
+            <span class="absolute top-4 right-4 bg-torvalca-accent text-white text-xs font-bold px-2 py-1 rounded-full z-10">
+              {product.category}
+            </span>
+            <img 
+              src={product.image} 
+              alt={product.title} 
+              class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-torvalca-olive transition-colors">
+              {product.title}
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              {product.description}
+            </p>
+          </div>
+          
+          <div class="px-6 pb-6 pt-0">
+             <a href="#contacto" class="text-torvalca-accent font-semibold text-sm hover:text-torvalca-gold flex items-center gap-1 group/btn">
+               Cotizar ahora 
+               <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+             </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

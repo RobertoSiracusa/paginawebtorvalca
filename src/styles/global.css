@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-torvalca-yellow: #F5D402;
+  --color-torvalca-gold: #CAB424;
+  --color-torvalca-accent: #A09237;
+  --color-torvalca-olive: #756E3C;
+  --color-torvalca-dark: #4B4833;
+}
