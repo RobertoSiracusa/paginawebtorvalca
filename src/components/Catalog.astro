@@ -1,27 +1,32 @@
 ---
+import imgAllen from '../assets/images/borde-allen-torval.png';
+import imgBarras from '../assets/images/borde-barras-torval.png';
+import imgTca from '../assets/images/borde-tca-torval.png';
+import imgBronce from '../assets/images/borde-bronce-torval.png';
+
 const products = [
   {
     title: "Tornillos Allen y Hexagonales",
     description: "Alta resistencia para maquinaria y estructuras pesadas. Grados 8.8, 10.9 y 12.9.",
-    image: "/images/borde-allen-torval.png",
+    image: imgAllen,
     category: "Industrial"
   },
   {
     title: "Barras Roscadas",
     description: "Sistemas de fijación versátiles para construcción y montaje. Diferentes longitudes y diámetros.",
-    image: "/images/borde-barras-torval.png",
+    image: imgBarras,
     category: "Construcción"
   },
   {
     title: "Tornillería Automotriz (TCA)",
     description: "Componentes especializados para el sector automotriz y maquinaria pesada.",
-    image: "/images/borde-tca-torval.png",
+    image: imgTca,
     category: "Automotriz"
   },
   {
     title: "Bronce y Aleaciones",
     description: "Resistencia a la corrosión y conductividad. Ideales para aplicaciones eléctricas y marítimas.",
-    image: "/images/borde-bronce-torval.png",
+    image: imgBronce,
     category: "Especiales"
   }
 ];
@@ -47,7 +52,7 @@ const products = [
               {product.category}
             </span>
             <img 
-              src={product.image} 
+              src={product.image.src} 
               alt={product.title} 
               class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
             />
